@@ -1,0 +1,11 @@
+name: Deploy STG
+
+on:
+  push:
+    tags:
+      - v0.147.0-rc1
+
+jobs:
+  CD:
+    name: Deploy Pilot Staging
+    uses: ./.github/workflows/cd.yml
